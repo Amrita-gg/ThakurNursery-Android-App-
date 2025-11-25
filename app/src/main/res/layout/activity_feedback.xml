@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.FeedbackActivity">
+
+    <!-- Toolbar -->
+
+    <!-- Title -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/feedback_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:title="Add Feedback"
+        app:layout_constraintBottom_toTopOf="@+id/feedback_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/ToolbarTitleText" />
+
+    <TextView
+        android:id="@+id/feedback_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/aclonica"
+        android:paddingTop="16dp"
+        android:text="We would love to hear your feedback!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rating_prompt"
+        app:layout_constraintStart_toStartOf="@+id/feedback_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_toolbar" />
+
+    <!-- Rating Bar Prompt -->
+
+    <!-- Rating Bar -->
+
+    <TextView
+        android:id="@+id/rating_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="Rate your experience"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rating_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_title" />
+
+    <!-- Comment Box Prompt -->
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/grey_font"
+        android:numStars="5"
+        android:progressTint="@color/green"
+        android:rating="5"
+        android:stepSize="1"
+        app:layout_constraintBottom_toTopOf="@+id/comment_prompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_prompt" />
+
+    <TextView
+        android:id="@+id/comment_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/actor"
+        android:text="Tell us about your experience"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/comment_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
+
+    <!-- Submit Button -->
+
+    <EditText
+        android:id="@+id/comment_box"
+        android:layout_width="385dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edit_text_bg1"
+        android:gravity="top|start"
+        android:hint="Please share your experience about our restaurant"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_font"
+        app:layout_constraintBottom_toTopOf="@+id/submit_feedback_button"
+        app:layout_constraintEnd_toEndOf="@+id/comment_prompt"
+        app:layout_constraintStart_toStartOf="@+id/comment_prompt"
+        app:layout_constraintTop_toBottomOf="@+id/comment_prompt" />
+
+    <Button
+        android:id="@+id/submit_feedback_button"
+        android:layout_width="271dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="429dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/abhaya_libre_bold"
+        android:gravity="center"
+        android:onClick="submitFeedback"
+        android:text="Submit Feedback"
+        android:textColor="@color/white"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/comment_box"
+        app:layout_constraintStart_toStartOf="@+id/comment_box"
+        app:layout_constraintTop_toBottomOf="@+id/comment_box" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

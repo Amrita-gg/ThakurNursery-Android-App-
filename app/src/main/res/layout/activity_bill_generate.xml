@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textColor="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.BillGenerateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        app:title="Generate Bill"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextAppearance="@style/ToolbarTitleText" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="343dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Generate Bill"
+        android:textColor="@color/green"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
+
+    <EditText
+        android:id="@+id/customer_name"
+        android:layout_width="412dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Customer Name"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <EditText
+        android:id="@+id/phone_no"
+        android:layout_width="413dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Phone No."
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customer_name" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="411dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Address"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_no" />
+
+    <!-- Item Description -->
+
+    <!-- Price per Item -->
+    <TextView
+        android:id="@+id/item_details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="Item Details :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address" />
+
+    <EditText
+        android:id="@+id/item_description"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Item Description"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_details_header" />
+
+    <!-- Item List -->
+
+    <EditText
+        android:id="@+id/item_price"
+        android:layout_width="409dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Price (₹)"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_description" />
+
+    <!-- Generate PDF Button -->
+    <Button
+        android:id="@+id/add_item_button"
+        android:layout_width="118dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/green"
+        android:text="Add Items"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_price"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="@+id/item_price"
+        app:layout_constraintTop_toBottomOf="@+id/item_price" />
+
+    <LinearLayout
+        android:id="@+id/item_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_item_button"
+
+        android:scrollbarSize="40dp"/>
+
+    <Button
+        android:id="@+id/generate_pdf_button"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/green"
+        android:padding="12dp"
+        android:text="Generate PDF"
+        android:textColor="@android:color/white"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/item_list"
+        app:layout_constraintTop_toBottomOf="@id/item_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

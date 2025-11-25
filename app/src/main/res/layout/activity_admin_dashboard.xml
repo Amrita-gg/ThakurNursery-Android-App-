@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.AdminDashboardActivity">
+
+    <include
+        layout="@layout/appbar"/>
+
+    <TextView
+        android:id="@+id/admin_dashboard_heading"
+        android:layout_width="395dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="Admin Dashboard"
+        android:textColor="@color/green"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="396dp"
+        android:layout_height="425dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="2"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_dashboard_heading">
+
+        <!-- View Bill -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Ibill"
+                    android:src="@drawable/bill" />
+
+                <Button
+                    android:id="@+id/bill"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:onClick="bill"
+                    android:text="Generate Bill/Invoice"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Manage Stock -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Istock"
+                    android:src="@drawable/stock" />
+
+                <Button
+                    android:id="@+id/stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:onClick="stock"
+                    android:text="Manage Stock"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- View Fertilizer Reminder -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Ialarm"
+                    android:src="@drawable/remainder" />
+
+                <Button
+                    android:id="@+id/alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:onClick="alarm"
+                    android:text="Fertilizer Remainder"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add Plant Information -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Iplant"
+                    android:src="@drawable/plant" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:onClick="plant"
+                    android:text="Add Plant Information"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

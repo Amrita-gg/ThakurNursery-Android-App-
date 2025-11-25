@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Image Slider -->
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="366dp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="0"
+            app:iss_period="1000" />
+
+        <!-- Banner Image -->
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+
+
+        <!-- Category Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Category"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/category_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="See All"
+                android:onClick="seeAll"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_purple"
+                android:gravity="end"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Category RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- New Products Section -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/new_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Products"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:layout_marginLeft="9dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/new_product_name"
+                        android:text="We provide best products."
+                        android:layout_marginLeft="9dp"/>
+
+                    <TextView
+                        android:id="@+id/newProducts_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_purple"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="8dp"/>
+
+                </RelativeLayout>
+
+                <!-- RecyclerView for New Products -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/new_product_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"/> <!-- Set spanCount to 3 for a 2x3 grid layout -->
+
+            </LinearLayout>
+
+
+
+        <!-- Popular Products Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/popular_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Products"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginLeft="9dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/popular_products"
+                    android:text="We provide best products."
+                    android:layout_marginLeft="9dp"/>
+
+                <TextView
+                    android:id="@+id/popular_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_purple"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

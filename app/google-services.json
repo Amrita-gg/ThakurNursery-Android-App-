@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "13815236060",
+    "firebase_url": "https://thakur-2a7b5-default-rtdb.firebaseio.com",
+    "project_id": "thakur-2a7b5",
+    "storage_bucket": "thakur-2a7b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13815236060:android:9459261b83c953adfbbb19",
+        "android_client_info": {
+          "package_name": "com.example.thakur_nursery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByqXRdZctp_DLp-ucwnyjFzgoOR8jgOxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

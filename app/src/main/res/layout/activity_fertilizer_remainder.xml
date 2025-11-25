@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.FertilizerRemainderActivity">
+
+    <include
+        layout="@layout/appbar"/>
+
+    <TextView
+        android:id="@+id/fertilizer_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="Fertilizer Reminder "
+        android:textColor="@color/green"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <EditText
+        android:id="@+id/plant_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Plant Name"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fertilizer_heading"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/fertilizer_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg1"
+        android:padding="15dp"
+
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plant_name"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/frequency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg1"
+        android:hint="Reminder Frequency (days)"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fertilizer_type_spinner"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/next_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg1"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Next Fertilization Date"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frequency"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/pick_date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="Pick Date"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/save_reminder_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.788"
+        app:layout_constraintStart_toEndOf="@id/next_date"
+        app:layout_constraintTop_toBottomOf="@id/next_date" />
+
+    <Button
+        android:id="@+id/save_reminder_button"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/green"
+        android:text="Save Reminder"
+        android:textColor="@color/white"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pick_date_button"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/update_reminder_button"
+        android:layout_width="163dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/green"
+        android:text="Update Reminder"
+        app:cornerRadius="4dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_reminder_button"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/delete_reminder_button"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/green"
+        android:text="Delete Reminder"
+        app:cornerRadius="4dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_reminder_button"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/view_reminders_button"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="View Reminders"
+        app:cornerRadius="4dp"
+        android:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_reminder_button"
+        app:layout_constraintWidth_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
